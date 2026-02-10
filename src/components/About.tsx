@@ -173,13 +173,13 @@ export const About = () => {
           viewport={{ once: true }}
         >
           <p>
-            Hello! I'm Emad Ahmed, a <span>Full-Stack Developer</span> who loves crafting immersive digital experiences. My journey in tech started with a curiosity about how things work on the internet, which led me to dive deep into web development.
+            I'm a <span>Full Stack .NET Developer</span> who transforms your ideas into robust, scalable applications. With expertise in <span>C#</span>, <span>ASP.NET MVC</span>, <span>Entity Framework Core</span>, and modern frontend technologies, I deliver end-to-end solutions that drive results.
           </p>
           <p>
-            I specialize in building scalable applications using <span>React</span>, <span>Node.js</span>, and modern UI frameworks. I believe in writing clean, maintainable code and providing the best user experience possible.
+            What sets me apart: <span>Strong problem-solving skills</span>, <span>Database optimization expertise</span>, and <span>Clean, maintainable code</span>. I don't just build applications—I architect solutions that scale, perform, and exceed expectations. From responsive UIs with React & TypeScript to powerful backend systems with SQL Server, I've got you covered.
           </p>
           <p>
-            In my free time, I enjoy contributing to open-source projects, learning new technologies, and exploring the intersection of <span>AI and Web</span>.
+            Currently training with <span>Digital Egypt Pioneers Initiative</span> and certified by <span>ITI</span>, I bring professional development practices and competitive programming experience to every project. Let's build something exceptional together! 🚀
           </p>
         </TextContent>
       </ContentWrapper>

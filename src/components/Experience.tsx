@@ -132,22 +132,22 @@ export const Experience = () => {
 
     const experiences = [
         {
-            title: 'Senior Full Stack Developer',
-            company: 'Tech Solutions Inc.',
-            date: '2022 - Present',
-            desc: 'Leading the frontend development team and architecting scalable backend solutions using .NET Core and React.'
+            title: 'Professional Development Trainee',
+            company: 'Digital Egypt Pioneers Initiative (DEPI)',
+            date: 'Current • 6 Months',
+            desc: 'Comprehensive full-stack development training focusing on .NET technologies, web development, and professional software engineering practices.'
         },
         {
-            title: 'Software Engineer',
-            company: 'Innovative Apps',
-            date: '2020 - 2022',
-            desc: 'Developed multiple client-facing applications and optimized database performance by 40%.'
+            title: 'Web Development using .NET Certification',
+            company: 'Information Technology Institute (ITI)',
+            date: 'June 2025 - July 2025',
+            desc: 'Completed intensive summer course on web development using .NET framework, covering ASP.NET MVC, Entity Framework, and modern web architecture patterns.'
         },
         {
-            title: 'Junior Developer',
-            company: 'Startup Hub',
-            date: '2019 - 2020',
-            desc: 'Collaborated with senior developers to build responsive UI components and integrate third-party APIs.'
+            title: 'Competitive Programming Participant',
+            company: 'ICPC ECPC (Egyptian Collegiate Programming Contest)',
+            date: 'August 2025',
+            desc: 'Participated in Day 7 programming contest achieving Honorable Mention recognition. Solved algorithmic problems under time constraints demonstrating strong problem-solving and analytical skills.'
         }
     ];
 

@@ -169,7 +169,12 @@ export const Projects = () => {
         },
         {
             title: 'Library Management System (LMS)',
-            desc: 'Comprehensive library management platform for handling book inventory, member registration, borrowing/returning books, and generating reports. Features role-based access control and real-time updates.',
+            desc: 'Full-stack library management platform for handling book inventory, member registration, borrowing/returning books, and generating reports. Features real-time updates, member dashboard, and admin control panel with comprehensive reporting capabilities.',
+            tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
+        },
+        {
+            title: 'Library Management System - ASP.NET MVC',
+            desc: 'Comprehensive library management solution built with ASP.NET MVC for book catalog management, member registration, circulation management, and generating detailed reports with role-based access control.',
             tags: ['C#', 'ASP.NET MVC', 'SQL Server', 'Entity Framework', 'Bootstrap'],
         },
         {
@@ -186,11 +191,6 @@ export const Projects = () => {
             title: 'Student Performance Analytics',
             desc: 'Analytics platform for tracking student performance, generating progress reports, and providing data-driven insights for educational institutions.',
             tags: ['Python', 'SQL', 'Data Structures', 'Algorithm Optimization'],
-        },
-        {
-            title: 'Real-Time Chat Application',
-            desc: 'Scalable chat application with real-time messaging, user authentication, and responsive design for seamless communication.',
-            tags: ['JavaScript', 'TypeScript', 'Node.js', 'Web Development'],
         },
     ];
 
