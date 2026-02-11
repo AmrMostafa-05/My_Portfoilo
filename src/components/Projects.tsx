@@ -348,7 +348,7 @@ export const Projects = () => {
           >
             <ProjectImage $theme={theme}>
               {project.image ? (
-                <img src={`/img/${project.image}`} alt={project.title} />
+                <img src={`img/${project.image}`} alt={project.title} />
               ) : (
                 <motion.div
                   style={{

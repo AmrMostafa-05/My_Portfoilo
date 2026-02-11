@@ -157,7 +157,7 @@ export const About = () => {
       </SectionTitle>
       <ContentWrapper>
         <ImagePlaceholder
-          src="/img/profile.jpg"
+          src="img/profile.jpg"
           alt="Emad Ahmed - Full Stack Developer"
           $theme={theme}
           initial={{ opacity: 0, x: -50, scale: 0.95 }}
