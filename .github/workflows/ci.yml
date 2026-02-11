@@ -37,4 +37,5 @@ jobs:
           else
             echo "package-lock.json not changed. Skipping dedupe check."
           fi
-      - run: npm test
+      - name: Build check
+        run: npm run build
