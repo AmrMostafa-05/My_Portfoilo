@@ -95,6 +95,19 @@ const ProjectImage = styled.div<{ $theme: Theme }>`
   position: relative;
   overflow: hidden;
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -235,47 +248,56 @@ const GitHubLink = styled(motion.a)`
 export const Projects = () => {
   const { theme } = useContext(AppContext);
 
-  const projects = [
+  interface Project {
+    title: string;
+    desc: string;
+    tags: string[];
+    image?: string;
+    icon?: string;
+    link: string;
+  }
+
+  const projects: Project[] = [
     {
       title: 'Full Stack .NET Portfolio Website',
-      desc: 'Modern, responsive portfolio website showcasing projects and skills with smooth animations, particle background effects, and professional design. Built with React, TypeScript, and Styled Components.',
+      desc: 'Modern, responsive portfolio website showcasing projects and skills with smooth animations, particle background effects, and professional design. Built with React, TypeScript, and Styled Components. This website is a work in progress and is constantly being updated with new projects and features.',
       tags: ['React', 'TypeScript', 'Styled Components', 'Framer Motion', 'tsparticles'],
-      icon: '🌐',
+      image: 'portfolio.png',
       link: 'https://github.com',
     },
     {
       title: 'Library Management System (LMS)',
       desc: 'Full-stack library management platform for handling book inventory, member registration, borrowing/returning books, and generating reports. Features real-time updates, member dashboard, and admin control panel with comprehensive reporting capabilities.',
       tags: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
-      icon: '📚',
+      image: 'Lms.png',
       link: 'https://github.com',
     },
     {
-      title: 'Library Management System - ASP.NET MVC',
-      desc: 'Comprehensive library management solution built with ASP.NET MVC for book catalog management, member registration, circulation management, and generating detailed reports with role-based access control.',
-      tags: ['C#', 'ASP.NET MVC', 'SQL Server', 'Entity Framework', 'Bootstrap'],
-      icon: '📖',
+      title: 'Operating System – Fat File System Project',
+      desc: 'Designed and implemented a mini FAT-based file system supporting full file and directory operations with cluster allocation on a virtual disk. Built a custom CLI shell integrating FileSystem, FAT, and Directory layers with a modular architecture.',
+      tags: ['C#', 'Operating Systems', 'File Systems', 'Data Structures', 'CLI'],
+      image: 'fat.png',
       link: 'https://github.com',
     },
     {
       title: 'E-Commerce Admin Dashboard',
-      desc: 'Full-featured e-commerce administration system for managing products, inventory, orders, and customer data with analytics and reporting capabilities.',
-      tags: ['C#', '.NET Core', 'SQL Server', 'JavaScript', 'Bootstrap'],
-      icon: '🛍️',
+      desc: 'Full-featured e-commerce admin system for managing products, orders, and customers with real-time analytics, role-based access, and a scalable high-performance architecture.',
+      tags: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      image: 'ecommerce.png',
       link: 'https://github.com',
     },
     {
       title: 'Data Management System',
       desc: 'Enterprise-level data management solution with advanced search, filtering, and CRUD operations. Includes data validation, error handling, and comprehensive logging.',
       tags: ['Java', 'MySQL', 'HTML5', 'CSS3', 'JavaScript'],
-      icon: '📊',
+      image: 'data.png',
       link: 'https://github.com',
     },
     {
-      title: 'Student Performance Analytics',
-      desc: 'Analytics platform for tracking student performance, generating progress reports, and providing data-driven insights for educational institutions.',
-      tags: ['Python', 'SQL', 'Data Structures', 'Algorithm Optimization'],
-      icon: '📈',
+      title: 'Fitness Class Booking System – SQL Database Project (ITI Scholarship)',
+      desc: 'Developed a gym management database with 5 tables, 50+ SQL queries, indexed performance optimization, and attendance analytics.',
+      tags: ['SQL Server', 'Database Design', 'Query Optimization'],
+      image: 'db.png',
       link: 'https://github.com',
     },
   ];
@@ -325,21 +347,25 @@ export const Projects = () => {
             variants={itemVariants}
           >
             <ProjectImage $theme={theme}>
-              <motion.div
-                style={{
-                  fontSize: '4rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                whileHover={{
-                  scale: 1.2,
-                  rotate: 10,
-                }}
-                transition={{ type: 'spring', stiffness: 300 }}
-              >
-                {project.icon}
-              </motion.div>
+              {project.image ? (
+                <img src={`/img/${project.image}`} alt={project.title} />
+              ) : (
+                <motion.div
+                  style={{
+                    fontSize: '4rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                  }}
+                  whileHover={{
+                    scale: 1.2,
+                    rotate: 10,
+                  }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  {project.icon}
+                </motion.div>
+              )}
             </ProjectImage>
             <ProjectInfo>
               <ProjectTitle $theme={theme}>{project.title}</ProjectTitle>

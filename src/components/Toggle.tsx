@@ -7,16 +7,17 @@ import { Moon, Sun } from 'icons';
 import { Theme } from 'types';
 
 const T = {
-  Container: styled.div`
-    position: fixed;
-    z-index: 1000;
-    top: 6rem;
-    right: 2rem;
+  Container: styled.div<{ $inline?: boolean }>`
+    ${({ $inline }) => !$inline && `
+      position: fixed;
+      z-index: 1000;
+      top: 6rem;
+      right: 2rem;
 
-    @media (max-width: 820px) {
-      top: 5rem;
-      right: 1.5rem;
-    }
+      @media (max-width: 820px) {
+        display: none;
+      }
+    `}
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,7 +65,7 @@ const T = {
   `,
 };
 
-export const Toggle = () => {
+export const Toggle = ({ inline = false }: { inline?: boolean }) => {
   const { theme, setTheme } = useContext(AppContext);
   const isDark = theme.key === 'dark';
   const ariaLabel = `Currently in ${isDark ? 'dark' : 'light'
@@ -72,13 +73,13 @@ export const Toggle = () => {
   const toggleDescriptionId = 'toggle-description';
 
   return (
-    <T.Container>
+    <T.Container $inline={inline}>
       <T.VisuallyHidden id={toggleDescriptionId}>
         Switch between dark and light mode for visual comfort.
       </T.VisuallyHidden>
       <T.Toggle
         data-v2="toggle"
-        id="toggle"
+        id={inline ? 'toggle-navbar' : 'toggle'}
         name="toggle"
         type="checkbox"
         checked={isDark}
@@ -91,7 +92,7 @@ export const Toggle = () => {
           setTheme(key);
         }}
       />
-      <T.Switch htmlFor="toggle" $theme={theme}>
+      <T.Switch htmlFor={inline ? 'toggle-navbar' : 'toggle'} $theme={theme}>
         <T.VisuallyHidden>{ariaLabel}</T.VisuallyHidden>
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>

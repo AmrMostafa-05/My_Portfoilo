@@ -1,19 +1,15 @@
 <div align="center">
   <img alt="Atom icon" src="public/icons/favicon.svg" height="64" />
-  <h1>adamalston.com - v2</h1>
+  <h1>Emad Ahmed - Portfolio</h1>
 </div>
 
-Version 2 of [adamalston.com](https://www.adamalston.com) built with [React](https://react.dev).
+My personal portfolio website built with [React](https://react.dev).
 
 | Desktop preview                                                     | Mobile preview                                                    |
 | ------------------------------------------------------------------- | ----------------------------------------------------------------- |
 | <img alt="Desktop preview" src="images/desktop.png" height="370" /> | <img alt="Mobile preview" src="images/mobile.png" height="370" /> |
 
 This website is designed to be simple and accessible. Dynamic particles create an interactive experience for visitors. The site offers two themes via a toggle: a dark theme (default) and a light theme. The selected theme persists across tabs, windows, and page reloads.
-
-## Open source
-
-This website is open source with the hope that others will use the code to create their own websites. If you do, please give proper credit by linking back to [adamalston.com](https://www.adamalston.com).
 
 ## Getting started
 
@@ -22,7 +18,7 @@ This website is open source with the hope that others will use the code to creat
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/adamalston/v2.git
+   git clone https://github.com/Emad-Ahmed6699/My_Portfoilo.git
    ```
 2. Navigate into the project directory:
    ```sh

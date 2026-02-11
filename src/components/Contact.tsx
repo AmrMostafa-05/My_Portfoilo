@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { AppContext } from 'App/AppContext';
+import { WhatsApp } from 'icons';
 import { Theme } from 'types';
 
 const ContactContainer = styled.section<{ $theme: Theme }>`
@@ -57,7 +58,7 @@ const ContactButton = styled(motion.a) <{ $theme: Theme }>`
   padding: 1.25rem 3rem;
   font-size: 1.125rem;
   font-weight: 600;
-  color: #3b82f6;
+  color: #fff;
   border: 2px solid #3b82f6;
   background: transparent;
   border-radius: 50px;
@@ -65,7 +66,10 @@ const ContactButton = styled(motion.a) <{ $theme: Theme }>`
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   &::before {
     content: '';
@@ -74,7 +78,7 @@ const ContactButton = styled(motion.a) <{ $theme: Theme }>`
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(37, 211, 102, 0.3), transparent);
     animation: shine 3s infinite;
   }
 
@@ -85,51 +89,60 @@ const ContactButton = styled(motion.a) <{ $theme: Theme }>`
   }
 
   &:hover {
-    background: #3b82f615;
+    background: rgba(37, 211, 102, 0.1);
     transform: translateY(-5px);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.5);
+    color: #25D366;
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
   }
 `;
 
 export const Contact = () => {
-    const { theme, config } = useContext(AppContext);
+  const { theme } = useContext(AppContext);
 
-    // Get email from config if available, otherwise use a placeholder
-    const emailButton = config.buttons.find(b => b.name === 'email');
-    const emailHref = emailButton ? emailButton.href : 'mailto:hello@example.com';
+  // WhatsApp link
+  const whatsappLink = 'https://wa.me/+201200947156';
 
-    return (
-        <ContactContainer id="contact" $theme={theme}>
-            <SectionTitle
-                $theme={theme}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
-                Get In Touch
-            </SectionTitle>
-            <ContactDescription
-                $theme={theme}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-            >
-                I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </ContactDescription>
-            <ContactButton
-                href={emailHref}
-                $theme={theme}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-            >
-                Say Hello
-            </ContactButton>
-        </ContactContainer>
-    );
+  return (
+    <ContactContainer id="contact" $theme={theme}>
+      <SectionTitle
+        $theme={theme}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        Get In Touch
+      </SectionTitle>
+      <ContactDescription
+        $theme={theme}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      </ContactDescription>
+      <ContactButton
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        $theme={theme}
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <WhatsApp />
+        <span>Say Hello</span>
+      </ContactButton>
+    </ContactContainer>
+  );
 };
