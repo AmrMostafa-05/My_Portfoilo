@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Amr Mostafa Saber - Full Stack .NET Developer Portfolio. Passionate about building scalable web applications with C#, ASP.NET MVC, and modern web technologies.">
+    <meta name="keywords" content="Full Stack Developer, .NET Developer, ASP.NET MVC, C#, Web Development, Portfolio">
+    <meta name="author" content="Amr Mostafa Saber">
+    <title>Amr Mostafa | Full Stack .NET Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-text">Amr Mostafa</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="nav-actions">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hello, I'm</p>
+                    <h1 class="hero-name">Amr Mostafa Saber</h1>
+                    <h2 class="hero-title">
+                        <span class="typing-text">Full Stack .NET Developer</span>
+                    </h2>
+                    <p class="hero-description">
+                        Passionate about building scalable web applications with clean, maintainable code.
+                        Specialized in C#, ASP.NET MVC, and modern web technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="mailto:mrwm51428@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/amr-mostafa-71888a333" target="_blank" class="social-link"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://wa.me/201094566337" target="_blank" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/AmrMostafa-05" target="_blank" class="social-link"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="images/AmrMostafaSaberResume.pdf" target="_blank" class="social-link"
+                            aria-label="View Resume">
+                            <i class="fas fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="images/profile.jpg" alt="Amr Mostafa Saber">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card glass-card">
+                    <div class="about-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <p class="about-text">
+                        Enthusiastic and dedicated Computer Engineering student with a strong passion for full-stack
+                        .NET development.
+                        Recently completed an intensive 120-hour training program at the Information Technology
+                        Institute (ITI) in Web Development using .NET.
+                    </p>
+                    <p class="about-text">
+                        Hands-on experience with C#, ASP.NET MVC, Entity Framework, and SQL Server, with a strong focus
+                        on clean, maintainable code.
+                        Currently a trainee at DEPI (Digital Egypt Pioneers Initiative) focused on building in-demand
+                        technical, English, and professional skills to support Egypt's digital transformation.
+                    </p>
+                    <p class="about-text">
+                        Detail-oriented, problem solver, fast learner, fluent in English, and highly motivated to
+                        contribute to real-world projects while continuously expanding technical expertise.
+                    </p>
+                    <div class="about-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Cairo, Egypt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-content">
+                <div class="education-card glass-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-info">
+                            <h3>Bachelor of Computers and Information</h3>
+                            <p class="education-major">Computer Science</p>
+                            <p class="education-school">Assiut University – Faculty of Computers and Information</p>
+                            <p class="education-date">2024 - 2027</p>
+                        </div>
+                    </div>
+                    <div class="education-gpa">
+                        <div class="gpa-circle">
+                            <svg class="gpa-svg" viewBox="0 0 100 100">
+                                <circle class="gpa-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="gpa-progress" cx="50" cy="50" r="45" style="--gpa-percent: 97;"></circle>
+                            </svg>
+                            <div class="gpa-text">
+                                <span class="gpa-value">3.88</span>
+                                <span class="gpa-max">/ 4.0</span>
+                            </div>
+                        </div>
+                        <p class="gpa-label">GPA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <!-- DEPI Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-badge current">Current</div>
+                        <h3 class="timeline-title">DEPI Trainee – Full Stack .NET Developer</h3>
+                        <p class="timeline-organization">Digital Egypt Pioneers Initiative (DEPI) – MCIT</p>
+                        <p class="timeline-date">
+                            <i class="fas fa-calendar"></i> 2026 – Present
+                        </p>
+                        <ul class="timeline-description">
+                            <li>Currently enrolled in a national training initiative launched by the Ministry of
+                                Communications and Information Technology (MCIT)</li>
+                            <li>Receiving advanced training in in-demand technical skills, along with English language
+                                and professional (soft) skills</li>
+                            <li>Preparing for real-world software development roles aligned with Egypt's digital
+                                transformation goals</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ITI Experience -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass-card">
+                        <h3 class="timeline-title">Trainee – Web Development using .NET</h3>
+                        <p class="timeline-organization">Information Technology Institute (ITI) – Sohag Branch</p>
+                        <p class="timeline-date">
+                            <i class="fas fa-calendar"></i> June 2025 – July 2025
+                        </p>
+                        <ul class="timeline-description">
+                            <li>Completed a 120-hour intensive summer training program using a Code-First approach</li>
+                            <li>Covered core technologies: C#, SQL Server, Entity Framework, ASP.NET MVC</li>
+                            <li>Successfully passed the English Placement Test and received an official ITI certificate
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-content">
+                <!-- Technical Skills -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-code"></i> Technical Skills
+                    </h3>
+
+                    <div class="skills-group glass-card">
+                        <h4 class="skills-group-title">Client Side</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group glass-card">
+                        <h4 class="skills-group-title">Server Side</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">OOP</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">SQL Server</span>
+                            <span class="skill-tag">LINQ</span>
+                            <span class="skill-tag">Entity Framework</span>
+                            <span class="skill-tag">ASP.NET MVC</span>
+                            <span class="skill-tag">Web API</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-group glass-card">
+                        <h4 class="skills-group-title">Development & Control Operations</h4>
+                        <div class="skills-list">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Agile Approach</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-users"></i> Soft Skills
+                    </h3>
+                    <div class="soft-skills glass-card">
+                        <div class="soft-skill-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Problem Solving & Analytical Thinking</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-people-group"></i>
+                            <span>Team Working</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast Learner</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Communication Skills</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="skills-category">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-language"></i> Languages
+                    </h3>
+                    <div class="languages glass-card">
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span class="language-name">Arabic</span>
+                                <span class="language-level">Native</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <div class="language-info">
+                                <span class="language-name">English</span>
+                                <span class="language-level">Fluent</span>
+                            </div>
+                            <div class="language-bar">
+                                <div class="language-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-content">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <img src="images/nurseiq-1.jpg" alt="NurseIQ Platform">
+                        <div class="project-overlay">
+                            <a href="https://github.com/AmrMostafa-05/Nurse_IQ" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">NurseIQ – Full-Stack Online Learning Platform</h3>
+                            <span class="project-status">In Progress</span>
+                        </div>
+                        <p class="project-date">
+                            <i class="fas fa-calendar"></i> June 23, 2025 – Present
+                        </p>
+                        <p class="project-description">
+                            Complete educational platform designed for nursing students with comprehensive learning
+                            features.
+                        </p>
+                        <ul class="project-features">
+                            <li><i class="fas fa-check"></i> Courses, quizzes, and progress tracking</li>
+                            <li><i class="fas fa-check"></i> Dynamic placement tests</li>
+                            <li><i class="fas fa-check"></i> User authentication and admin panel</li>
+                            <li><i class="fas fa-check"></i> Responsive design</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">ASP.NET MVC</span>
+                            <span class="tech-tag">Entity Framework</span>
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">Bootstrap</span>
+                            <span class="tech-tag">jQuery</span>
+                        </div>
+
+                        <!-- Project Screenshots Gallery -->
+                        <div class="project-gallery">
+                            <div class="gallery-item">
+                                <img src="images/nurseiq-2.jpg" alt="NurseIQ Home Page">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/nurseiq-3.jpg" alt="NurseIQ Courses">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="images/nurseiq-4.jpg" alt="NurseIQ Videos">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section id="extracurricular" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities</h2>
+            <div class="extracurricular-content">
+                <div class="activity-card glass-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="activity-title">Volunteer Mentor</h3>
+                    <p class="activity-organization">Winter Programming Training Program – 2nd Edition</p>
+                    <p class="activity-collaboration">In collaboration with the Faculty of Computers and Information
+                        Student Union</p>
+                    <div class="activity-description">
+                        <p>Mentored beginners in C++ fundamentals (up to Functions), problem-solving using ICPC Assiut
+                            sheets, and teamwork.</p>
+                        <ul class="activity-achievements">
+                            <li><i class="fas fa-star"></i> Supported weekly contests, quizzes, tests, and a final
+                                project</li>
+                            <li><i class="fas fa-star"></i> Helped filter and track progress for 160 out of 250 accepted
+                                students (from 500 applicants)</li>
+                            <li><i class="fas fa-star"></i> Guided students through problem-solving strategies and best
+                                practices</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <a href="mailto:mrwm51428@gmail.com">Connect with me</a>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <a href="https://wa.me/201094566337" target="_blank">Connect with me</a>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://linkedin.com/in/amr-mostafa-71888a333" target="_blank">Connect with me</a>
+                    </div>
+                    <div class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/AmrMostafa-05" target="_blank">View my work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Amr Mostafa Saber. All rights reserved.</p>
+            <p class="footer-tagline">Built with passion and dedication</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
