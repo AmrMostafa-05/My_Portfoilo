@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="Atom icon" src="public/icons/favicon.svg" height="64" />
-  <h1>Emad Ahmed - Portfolio</h1>
+  <h1>amr mostafa  - Portfolio</h1>
 </div>
 
 My personal portfolio website built with [React](https://react.dev).
@@ -18,7 +18,7 @@ This website is designed to be simple and accessible. Dynamic particles create a
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/Emad-Ahmed6699/My_Portfoilo.git
+   git clone https://github.com/amr-Ahmed6699/My_Portfoilo.git
    ```
 2. Navigate into the project directory:
    ```sh
